@@ -1,0 +1,23 @@
+{% if series_list %}
+    {% for series in series_list %}
+        <div>Series_number: <a href="/archive/{{ series.id }}/">{{ series.series_number }}</a></div>
+        <div>Subseries_number: <a href="/archive/">{{ series.subseries_number }}</a></div>
+    	<div>box_number: <a href="/archive/">{{ series.box_number }}</a></div>
+    	<div>file_number: <a href="/archive/">{{ series.file_number }}</a></div>
+    	<div>pub_date: <a href="/archive/">{{ series.pub_date }}</a></div>
+    	<div>publication_series: <a href="/archive/">{{ series.publication_series }}</a></div>
+    	<div>document_number: <a href="/archive/">{{ series.document_number }}</a></div>
+    	<div>title: <a href="/archive/">{{ series.title }}</a></div>
+	<div>Scanned: {{ series.scanned }}</div>
+	<div>Reviewed: {{ series.reviewed }}</div>
+	<div>Followup: {{ series.followup }}</div>
+    	<div>subject: <a href="/archive/">{{ series.subject }}</a></div>
+    	<div>keywords: <a href="/archive/">{{ series.keywords }}</a></div>
+    	<div>summary: <a href="/archive/">{{ series.summary }}</a></div>
+    	<div>research_notes: <a href="/archive/">{{ series.research_notes }}</a></div>
+    	<div>personnel: <a href="/archive/">{{ series.personnel }}</a></div>
+    	<div><p>----------------------------------------------------------------</p></div>
+    {% endfor %}
+{% else %}
+    <p>No serieses are available.</p>
+{% endif %}
